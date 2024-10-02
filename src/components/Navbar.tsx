@@ -39,21 +39,25 @@ export function Navbar() {
   return (
     <>
       <div className="absolute top-0 w-full h-20 flex flex-row justify-between items-center px-6">
-        <img src="/logo.png" alt="Logo" />
+        <img src="/logo.png" className="h-[72px] w-[72px]" alt="Logo" />
         <img
           id="menu"
           src={menu ? "/close.png" : "/menu.png"}
-          className="h-12 w-12 cursor-pointer"
+          className="h-14 w-14 cursor-pointer"
           onClick={handleMenuClick}
           alt={menu ? "Close menu" : "Open menu"}
         />
       </div>
       <div
         id="small-nav"
-        className="absolute top-20 w-full h-[500px] bg-transparent  justify-center items-center hidden"
+        className="absolute top-[85px] w-full h-[500px] bg-transparent  justify-center items-center hidden "
       >
-        <div className="w-[80%] h-full bg-mainGreen rounded-xl px-6 py-4">
-          test
+        <div className="w-[80%] h-full bg-mainGreen rounded-xl flex justify-center items-center shadow-xl">
+          <div className="w-[90%] h-[92%] bg-darkGreen px-6 py-8 rounded-md flex justify-start items-center flex-col gap-y-8 text-white font-raleway font-bold">
+            <a href="#">test</a>
+            <a href="#">test</a>
+            <a href="#">test</a>
+          </div>
         </div>
       </div>
     </>

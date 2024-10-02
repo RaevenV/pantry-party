@@ -9,7 +9,7 @@ function App() {
       <div
         style={{
           backgroundImage: "url(/Background.png)", 
-          backgroundSize: "cover", 
+          backgroundSize: "contain", 
           backgroundPosition: "center",
         }}
         className="relative mobile-view w-full max-w-[505px] min-h-screen bg-cream overflow-y-auto overflow-x-hidden"
