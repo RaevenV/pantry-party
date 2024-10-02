@@ -1,9 +1,8 @@
 
 export function Home() {
-  
   return (
-    <>
-      test
-    </>
+    <div className="w-full min-h-full p-4 ">
+      
+    </div>
   );
 }
