@@ -1,12 +1,15 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./Home";
+
 
 function App() {
   
-
   return (
-    <>
-      <div className="w-full bg-slate-400 min-h-screen">test</div>
-    </>
+    <div className="relative home-container bg-slate-600 min-h-screen">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
