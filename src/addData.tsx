@@ -1,32 +1,31 @@
 import React from "react";
-import { batchAddCookingSteps } from "./firebaseUtils";
+import { BatchAddCookingSteps } from "./firebaseUtils";
 
 const DatabaseSeeder: React.FC = () => {
   const handleAddCookingSteps = async () => {
     const CookingSteps = [
       {
-        cookTime: "30 minutes",
-        cookingStepsId: [0, 1, 2, 3, 4],
+        cookTime: "20 minutes",
+        cookingStepsId: [1,2],
         description:
-          "Teriyaki chicken is a flavorful Japanese dish where chicken is cooked and coated in a sweet, savory glaze. The sauce creates a rich, glossy finish, making the chicken tender and delicious.",
+          "A fresh and light avocado toast with a crispy base and creamy, mashed avocado. The hint of lemon and pepper adds a vibrant kick to each bite.",
         difficulty: "easy",
-        id: 1,
+        id: 2,
         ingredientList: [
-          "800g chicken thighs",
-          "37.5g brown sugar",
-          "60g soy sauce",
-          "5g garlic",
-          "2g grated ginger (optional)",
-          "15g water",
-          "27.5g cooking oil",
+          "2 slices of toast",
+          "1 ripe avocado",
+          "10g lemon juice",
+          "Salt, to taste",
+          "Black pepper, to taste",
+          "Olive oil, for drizzling",
         ],
-        name: "Teriyaki Chicken",
-        prepTime: "30 minutes",
-        servings: 4,
+        name: "Avocado Toast",
+        prepTime: "10 minutes",
+        servings: 2,
       },
     ];
 
-    await batchAddCookingSteps(CookingSteps);
+    await BatchAddCookingSteps(CookingSteps);
   };
 
   return (

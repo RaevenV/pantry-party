@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
 
 
-export function Navbar() {
+export function Navbar2() {
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
 
@@ -51,13 +51,13 @@ export function Navbar() {
       >
         <img
           onClick={handleHomeClick}
-          src="/logo.png"
-          className="h-[72px] w-[72px] cursor-pointer"
+          src="/logo2.png"
+          className="h-[40px] w-[60px] cursor-pointer"
           alt="Logo"
         />
         <img
           id="menu"
-          src={menu ? "/close.png" : "/menu.png"}
+          src={menu ? "/close2.png" : "/menu2.png"}
           className="h-8 w-8 cursor-pointer"
           onClick={handleMenuClick}
           alt={menu ? "Close menu" : "Open menu"}

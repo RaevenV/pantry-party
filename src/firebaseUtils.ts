@@ -13,7 +13,7 @@ interface CookingStep {
   cookingStepsId: number[];
 }
 
-export const batchAddCookingSteps = async (steps: CookingStep[]) => {
+export const BatchAddCookingSteps = async (steps: CookingStep[]) => {
   const batch = writeBatch(db);
 
   steps.forEach((step) => {
