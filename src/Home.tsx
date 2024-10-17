@@ -129,11 +129,15 @@ export function Home() {
                   />
                   <div className="w-full h-[40%] flex justify-center items-center px-2 py-2">
                     <div className="w-full h-full bg-cream rounded-md text-sm font-medium font-archivo px-2 pt-1 flex flex-col justify-start items-start">
-                      <span className="font-bold text-[16px] mb-1">
+                      <span className="font-bold text-[14px] mb-1">
                         {item.name}
                       </span>
-                      <span>prep time: {item.prepTime}</span>
-                      <span>cook time: {item.cookTime}</span>
+                      <span className="text-[10px]">
+                        prep time: {item.prepTime}
+                      </span>
+                      <span className="text-[10px]">
+                        cook time: {item.cookTime}
+                      </span>
                     </div>
                   </div>
                 </div>
