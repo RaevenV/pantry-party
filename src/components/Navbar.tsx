@@ -65,7 +65,7 @@ export function Navbar() {
       </div>
       <div
         id="small-nav"
-        className="absolute top-[85px] w-full h-[500px] bg-transparent  justify-center items-center hidden "
+        className="absolute top-[85px] w-full h-[500px] bg-transparent z-[1] justify-center items-center hidden"
       >
         <div className="w-[80%] h-full bg-mainGreen rounded-xl flex justify-center items-center shadow-xl">
           <div className="w-[90%] h-[92%]  px-6 py-8 rounded-md flex justify-start items-center flex-col gap-y-8 text-white font-raleway font-bold">

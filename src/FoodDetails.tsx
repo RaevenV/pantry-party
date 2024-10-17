@@ -2,8 +2,14 @@ import { useLocation } from "react-router-dom";
 import { FoodItem } from "./Home";
 import { Navbar2 } from "./components/Navbar2";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function FoodDetails() {
+  const navigate = useNavigate();
+  const navigateStartCooking = () => {
+    navigate("/startCooking", { state: foodItem });
+  };
+  
   const location = useLocation();
   const [foodItem, setFoodItem] = useState<FoodItem>(
     location.state as FoodItem
@@ -19,7 +25,7 @@ export function FoodDetails() {
     if (match) {
       const originalAmount = parseFloat(match[1]);
       const scaledAmount = originalAmount * scaleFactor;
-      const roundedAmount = Math.round(scaledAmount * 100) / 100; // Round to 2 decimal places
+      const roundedAmount = Math.round(scaledAmount * 100) / 100;
       return `${roundedAmount}${match[2]} ${match[3]}`;
     }
     return ingredientString;
@@ -38,10 +44,6 @@ export function FoodDetails() {
     if (!isNaN(newServings) && newServings > 0) {
       setServings(newServings);
     }
-  };
-
-  const handleStartCooking = () => {
-    console.log("Start cooking:", foodItem.name);
   };
 
   return (
@@ -102,7 +104,7 @@ export function FoodDetails() {
         <div className="flex justify-center items-center w-full h-32 pt-10">
           <img
             src="./startCooking.png"
-            onClick={handleStartCooking}
+            onClick={navigateStartCooking}
             className="hover:scale-[1.02] h-full w-[40%] transition-all ease-in duration-[200] cursor-pointer"
             alt="Start Cooking"
           />

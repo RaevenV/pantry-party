@@ -87,7 +87,7 @@ export function Home() {
           <input
             name="search"
             type="text"
-            placeholder="search for menus"
+            placeholder="search for recipes"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-[85%] h-[70%] bg-white rounded-xl px-4 focus:border-0 shadow-md placeholder-darkGreen focus:outline-none text-darkGreen font-bold text-[14px]"
@@ -119,7 +119,7 @@ export function Home() {
             ? filteredFoodItems.map((item) => (
                 <div
                   key={item.id}
-                  className="w-[48%] h-64 bg-white rounded-xl shadow-xl hover:scale-[1.02] transition-all duration-[400] flex flex-col items-center justify-start cursor-pointer pt-2"
+                  className="w-[48%] h-80 bg-white rounded-xl shadow-xl hover:bg-[#256B4A] hover:scale-[1.02] transition-all duration-[400] flex flex-col items-center justify-start cursor-pointer pt-2"
                   onClick={() => handleCardClick(item)}
                 >
                   <img
@@ -141,7 +141,7 @@ export function Home() {
             : foodItems.map((item) => (
                 <div
                   key={item.id}
-                  className="w-[48%] h-64 bg-white rounded-xl shadow-xl hover:scale-[1.02] transition-all duration-[400] flex flex-col items-center justify-start cursor-pointer pt-2"
+                  className="w-[48%] h-80 bg-white rounded-xl shadow-xl hover:bg-[#256B4A] hover:scale-[1.02] transition-all duration-[400] flex flex-col items-center justify-start cursor-pointer pt-2"
                   onClick={() => handleCardClick(item)}
                 >
                   <img
