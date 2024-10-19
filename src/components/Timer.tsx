@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const CountdownTimer: React.FC = () => {
-  const [time, setTime] = useState<number>(300); 
+interface CountdownTimerProps {
+  duration: number; // Duration in seconds
+}
+
+const CountdownTimer: React.FC<CountdownTimerProps> = ({ duration }) => {
+  const [time, setTime] = useState<number>(duration); 
   const [isActive, setIsActive] = useState<boolean>(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null); 
 

@@ -7,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 export function FoodDetails() {
   const navigate = useNavigate();
   const navigateStartCooking = () => {
-    navigate("/startCooking", { state: foodItem });
+    navigate("/startCooking", { 
+      state: { ...foodItem, servings } 
+    });
   };
   
   const location = useLocation();
